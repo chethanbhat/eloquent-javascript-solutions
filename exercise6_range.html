@@ -1,0 +1,42 @@
+<script type="text/javascript">
+
+  function range(start,end,step){
+
+    var numbers = [];
+    var increment = step || 1 ;
+
+    if(increment >= 0) {
+      for(var i=start; i <= end; i = i + increment){
+
+        numbers.push(i);
+
+      }
+    }else {
+      for(var i=start; i >= end; i = i + increment){
+        numbers.push(i);
+      }
+    }
+
+    return numbers;
+
+  }
+
+  function sum(numberRange){
+
+    return numberRange.reduce(function(a,b){
+      return a+b;
+    });
+
+  }
+
+
+
+
+  console.log(range(1, 10));
+
+  console.log(range(5, 2, -1));
+
+  console.log(sum(range(1,10)));
+
+
+</script>

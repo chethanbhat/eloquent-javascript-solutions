@@ -1,0 +1,38 @@
+<script type="text/javascript">
+
+
+  function reverseArray(toReverse){
+
+    var reverse = [];
+
+    for(var i=toReverse.length-1; i>=0; i--){
+       reverse.push(toReverse[i]);
+    }
+
+    return reverse;
+
+  }
+
+  function reverseArrayInPlace(toReverse){
+
+        var midlength = Math.floor(toReverse.length/2);
+        var temp;
+
+        for(var i=0; i<midlength; i++){
+
+            temp = toReverse[i];
+            toReverse[i] = toReverse[toReverse.length-1-i] ;
+            toReverse[toReverse.length-1-i] = temp;
+        }
+
+
+    return toReverse;
+  }
+
+  console.log(reverseArray(["A", "B", "C"]));
+
+  var arrayValue = [1, 2, 3, 4, 5];
+  reverseArrayInPlace(arrayValue);
+  console.log(arrayValue);
+
+</script>
