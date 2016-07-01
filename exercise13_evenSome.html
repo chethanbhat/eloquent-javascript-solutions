@@ -1,0 +1,42 @@
+<script type="text/javascript">
+
+function every(array,f){
+
+    var trueCount = 0;
+
+    for(var i=0; i < array.length; i++){
+
+        if(f(array[i])) trueCount++;
+    }
+
+    return trueCount == array.length ? true : false;
+}
+
+function some(array,f){
+
+    var trueCount = 0;
+
+    for(var i=0; i < array.length; i++){
+
+        if(f(array[i])) trueCount++;
+    }
+
+    return trueCount >= 1 ? true : false;
+
+}
+
+
+// Your code here.
+
+console.log(every([NaN, NaN, NaN], isNaN));
+// → true
+console.log(every([NaN, NaN, 4], isNaN));
+// → false
+console.log(some([NaN, 3, 4], isNaN));
+// → true
+console.log(some([2, 3, 4], isNaN));
+// → false
+
+
+
+</script>
